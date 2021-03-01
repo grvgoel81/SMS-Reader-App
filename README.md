@@ -1,29 +1,26 @@
-# Simple Inbox
-A sample app to demonstrate the building of a good, modular and scalable Android app using Kotlin, Android Architecture Components (LiveData, ViewModel), Dagger, RxJava and RxAndroid among others.
+# SMS InboxApp
+App for reading and organizing SMS from phone.
 
-# Features
-Some of the features of the app include
+Project characteristics 🚀
+---
 
-- **Modular** - The app is broken into modules of features and libraries which can be combined to build instant-apps, complete apps or lite version of apps.
+This project brings to the table set of best practices, tools, and solutions:
 
-- **MVVM architecture** - Using the lifecycle aware ViewModels, the view observes changes in the model / repository.
+* 100% [Kotlin](https://kotlinlang.org/)
+* Modern architecture (Model-View-ViewModel)
+* [Android Jetpack](https://developer.android.com/jetpack)
 
-- **Kotlin** - This app is completely written in Kotlin.
+Built With 🛠
+---
 
-- **Android Architecture Components** - Lifecycle awareness has been achieved using a combination of LiveData, ViewModels.
-
-- **Pagination** - App loads messages in a pagination manner.
-
-- **Dependency Injection** - Common elements like `context`, `networking` interface are injected using Dagger 2.
-
-- **Feature based packaging** - This screen-wise / feature-wise packaging makes code really easy to read and debug.
-
-
-## Screenshot 1
-<img src="https://github.com/abhishekdubey331/Messaging-App/blob/master/screens/screen_1.jpg">
-
-## Screenshot 2
-<img src="https://github.com/abhishekdubey331/Messaging-App/blob/master/screens/screen_2.jpg">
+- [Kotlin](https://kotlinlang.org/) - Official programming language for Android development.
+- [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - Kotlin's way of writing asynchronous, non-blocking code
+- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) - Collection of libraries that help you design robust, testable, and maintainable apps
+  - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Data objects that notify views when the underlying data changes
+  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes
+- [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
+- [Moshi](https://github.com/square/moshi) - A modern JSON library for Android and Java
+- [Glide](https://github.com/bumptech/glide) - Open source media management and image loading framework for Android
 
 
 
