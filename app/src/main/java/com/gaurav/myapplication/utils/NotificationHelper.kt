@@ -1,4 +1,4 @@
-package com.vokal.messaging.utils
+package com.gaurav.myapplication.utils
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -9,10 +9,8 @@ import android.graphics.Color
 import android.provider.Settings
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
-import com.core.base.utils.AppPreferences
-import com.vokal.messaging.MessageListActivity
-import com.vokal.messaging.R
-
+import com.gaurav.myapplication.R
+import com.gaurav.myapplication.ui.activity.MainActivity
 
 class NotificationHelper(private val mContext: Context, private val appPrefs: AppPreferences) {
 
@@ -26,8 +24,8 @@ class NotificationHelper(private val mContext: Context, private val appPrefs: Ap
     /**
      * Create and push the notification
      */
-    fun createNotification(title: String?, message: String) {
-        val resultIntent = Intent(mContext, MessageListActivity::class.java)
+    fun showNotification(title: String?, message: String) {
+        val resultIntent = Intent(mContext, MainActivity::class.java)
         resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         appPrefs.notificationMessageBody = message
         val resultPendingIntent = PendingIntent.getActivity(
@@ -38,9 +36,9 @@ class NotificationHelper(private val mContext: Context, private val appPrefs: Ap
 
         mBuilder = NotificationCompat.Builder(mContext, NOTIFICATION_CHANNEL_ID)
         mBuilder.apply {
-            setSmallIcon(R.drawable.ic_message).color = ContextCompat.getColor(mContext, R.color.colorAccent)
+            setSmallIcon(R.drawable.ic_baseline_message_24).color = ContextCompat.getColor(mContext, R.color.purple_700)
             setContentTitle(title?.orEmpty())
-            setContentText(message).color = ContextCompat.getColor(mContext, R.color.colorAccent)
+            setContentText(message).color = ContextCompat.getColor(mContext, R.color.purple_700)
             setAutoCancel(true)
             setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
             setContentIntent(resultPendingIntent)
@@ -55,7 +53,6 @@ class NotificationHelper(private val mContext: Context, private val appPrefs: Ap
                 enableLights(true)
                 lightColor = Color.RED
                 enableVibration(true)
-                vibrationPattern = longArrayOf(100, 200, 300, 400, 500, 400, 300, 200, 400)
             }
             mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID)
             mNotificationManager.createNotificationChannel(notificationChannel)

@@ -1,4 +1,4 @@
-package com.core.base.networking
+package com.gaurav.myapplication.networking
 
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

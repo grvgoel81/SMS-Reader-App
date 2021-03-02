@@ -1,8 +1,8 @@
-package com.core.base.di
+package com.gaurav.myapplication.di
 
 import android.content.Context
-import com.core.base.networking.Scheduler
-import com.core.base.utils.AppPreferences
+import com.gaurav.myapplication.networking.Scheduler
+import com.gaurav.myapplication.utils.AppPreferences
 import com.squareup.picasso.Picasso
 import dagger.Component
 import retrofit2.Retrofit

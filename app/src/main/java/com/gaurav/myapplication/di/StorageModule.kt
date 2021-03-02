@@ -1,7 +1,7 @@
-package com.core.base.di
+package com.gaurav.myapplication.di
 
 import android.content.Context
-import com.core.base.utils.AppPreferences
+import com.gaurav.myapplication.utils.AppPreferences
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

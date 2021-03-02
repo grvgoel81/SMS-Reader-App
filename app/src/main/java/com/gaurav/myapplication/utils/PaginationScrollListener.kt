@@ -1,4 +1,4 @@
-package com.core.base.utils
+package com.gaurav.myapplication.utils
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

@@ -1,4 +1,4 @@
-package com.core.base.extensions
+package com.gaurav.myapplication.utils.extensions
 
 import android.Manifest
 import android.content.Context
@@ -8,7 +8,6 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.google.android.material.snackbar.Snackbar
 
 
 fun Context.checkSmsReadPermission(): Boolean {
@@ -24,15 +23,15 @@ inline fun <R> R?.orElse(block: () -> R): R {
     return this ?: block()
 }
 
-fun View.makeVisible() {
+fun View.show() {
     visibility = View.VISIBLE
 }
 
-fun View.makeInVisible() {
+fun View.inVisible() {
     visibility = View.INVISIBLE
 }
 
-fun View.gone() {
+fun View.hide() {
     visibility = View.GONE
 }
 

@@ -1,4 +1,4 @@
-package com.vokal.messaging.di
+package com.gaurav.myapplication.di.message
 
 import javax.inject.Scope
 

@@ -1,8 +1,8 @@
-package com.core.base.extensions
+package com.gaurav.myapplication.utils.extensions
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.core.base.networking.Outcome
+import com.gaurav.myapplication.networking.Outcome
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subjects.PublishSubject
 

@@ -1,7 +1,6 @@
-package com.vokal.messaging.di
+package com.gaurav.myapplication.di.message
 
-
-import com.core.base.application.CoreApp
+import com.gaurav.myapplication.SMSApplication
 import javax.inject.Singleton
 
 @Singleton
@@ -11,7 +10,7 @@ object MessageDH {
 
     fun messageComponent(): MessageComponent {
         if (messageComponent == null)
-            messageComponent = DaggerMessageComponent.builder().coreComponent(CoreApp.coreComponent).build()
+            messageComponent = DaggerMessageComponent.builder().coreComponent(SMSApplication.coreComponent).build()
         return messageComponent as MessageComponent
     }
 

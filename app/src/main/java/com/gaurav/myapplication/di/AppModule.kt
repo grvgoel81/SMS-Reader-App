@@ -1,8 +1,8 @@
-package com.core.base.di
+package com.gaurav.myapplication.di
 
 import android.content.Context
-import com.core.base.networking.AppScheduler
-import com.core.base.networking.Scheduler
+import com.gaurav.myapplication.networking.AppScheduler
+import com.gaurav.myapplication.networking.Scheduler
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

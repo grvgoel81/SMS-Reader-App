@@ -1,4 +1,9 @@
 package com.gaurav.myapplication.data
 
-class MessageData {
-}
+data class MessageData (
+    val messageBody: String?,
+    val person: String?,
+    val time: String,
+    val address: String?,
+    var expanded: Boolean = false
+)

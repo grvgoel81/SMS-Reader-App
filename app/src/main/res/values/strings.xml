@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SMS Reader App</string>
+    <string name="permission_not_granted">Without SMS permission this app would not work.</string>
+    <string name="no_messages_found">No messages found</string>
+    <string name="just_now">Just now</string>
+    <string name="showing_messages">Showing messages till 2 days</string>
 </resources>

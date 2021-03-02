@@ -1,11 +1,8 @@
-package com.core.base.di
+package com.gaurav.myapplication.di
 
 import android.content.Context
-import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.Gson
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import com.core.base.BuildConfig
-import com.core.base.constants.Constants
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -18,12 +15,16 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
+    companion object {
+        private const val BASE_URL = ""
+    }
+
     @Provides
     @Singleton
     fun providesRetrofit(gsonConverterFactory: GsonConverterFactory,
                          rxJava2CallAdapterFactory: RxJava2CallAdapterFactory,
                          okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder().baseUrl(Constants.API_URL)
+        return Retrofit.Builder().baseUrl(BASE_URL)
                 .addConverterFactory(gsonConverterFactory)
                 .addCallAdapterFactory(rxJava2CallAdapterFactory)
                 .client(okHttpClient)
@@ -38,9 +39,6 @@ class NetworkModule {
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
-
-        if (BuildConfig.DEBUG)
-            client.addNetworkInterceptor(StethoInterceptor())
 
         return client.build()
     }

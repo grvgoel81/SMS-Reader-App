@@ -1,9 +1,9 @@
-package com.core.base.networking
+package com.gaurav.myapplication.networking
 
 import io.reactivex.Scheduler
 
 /**
- *  Interface to mock different threads during testing.
+ *  Interface to mock different threads.
 * */
 interface Scheduler {
     fun mainThread():Scheduler

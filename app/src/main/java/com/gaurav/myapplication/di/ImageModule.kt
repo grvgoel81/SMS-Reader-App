@@ -1,4 +1,4 @@
-package com.core.base.di
+package com.gaurav.myapplication.di
 
 import android.content.Context
 import com.jakewharton.picasso.OkHttp3Downloader
